@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>De vuelta a ti — Workshop con Chila Piña</title>
+  
+  <!-- SEO & Meta Tags -->
+  <meta name="description" content="Workshop online 'De vuelta a ti' con Chila Piña. 5 semanas para transformar el agotamiento, soltar la culpa y reconectar contigo misma sin dramas." />
+  
+  <!-- Open Graph / WhatsApp / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://chilapina.com/devueltati/" />
+  <meta property="og:title" content="De vuelta a ti — Workshop con Chila Piña" />
+  <meta property="og:description" content="Para la mujer que tiene la vida 'perfecta' por fuera y un vacío inexplicable por dentro. Workshop en vivo de 5 semanas para regresar a ti." />
+  <meta property="og:image" content="https://chilapina.com/devueltati/chila-ig.png" />
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="De vuelta a ti — Workshop con Chila Piña" />
+  <meta name="twitter:description" content="Para la mujer que tiene la vida 'perfecta' por fuera y un vacío inexplicable por dentro. Workshop en vivo de 5 semanas para regresar a ti." />
+  <meta name="twitter:image" content="https://chilapina.com/devueltati/chila-ig.png" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://chilapina.com/devueltati/chila-ig.png" />
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --color-primary: #8B7355;
+      --color-secondary: #D4A59A;
+      --color-bg-main: #FDF9F5;
+      --color-bg-alt: #F5EFE6;
+      --color-text-main: #3E3A33;
+      --color-text-muted: #6B6358;
+      --color-accent: #A67C52;
+      --color-white: #FFFFFF;
+      --color-whatsapp: #25D366;
+      --shadow-soft: 0 4px 20px rgba(139, 115, 85, 0.12);
+      --shadow-hover: 0 8px 30px rgba(139, 115, 85, 0.2);
+      --radius-lg: 20px;
+      --radius-md: 12px;
+      --transition: all 0.3s ease;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      background: var(--color-bg-main);
+      color: var(--color-text-main);
+      line-height: 1.7;
+      font-weight: 300;
+      padding-bottom: 70px; /* Espacio para barra móvil flotante */
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      line-height: 1.3;
+      color: var(--color-primary);
+    }
+
+    h1 { font-size: 2.8rem; margin-bottom: 1rem; }
+    h2 { font-size: 2.2rem; margin: 2.5rem 0 1.5rem; }
+    h3 { font-size: 1.6rem; margin: 1.5rem 0 1rem; }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Header Hero */
+    .hero {
+      background: linear-gradient(135deg, var(--color-bg-alt) 0%, var(--color-bg-main) 100%);
+      padding: 4rem 0 3rem;
+      text-align: center;
+      border-bottom: 3px solid var(--color-secondary);
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: var(--color-secondary);
+      color: var(--color-white);
+      padding: 6px 14px;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      font-weight: 400;
+      margin-bottom: 1rem;
+      letter-spacing: 0.5px;
+    }
+
+    .hero-subtitle {
+      font-size: 1.25rem;
+      color: var(--color-text-muted);
+      max-width: 700px;
+      margin: 0 auto 2rem;
+      font-style: italic;
+    }
+
+    .event-details {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin: 1rem 0;
+      font-size: 1.1rem;
+    }
+
+    .event-details span {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    /* Botones */
+    .btn {
+      display: inline-block;
+      background: var(--color-primary);
+      color: var(--color-white);
+      padding: 15px 30px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.1rem;
+      transition: var(--transition);
+      box-shadow: var(--shadow-soft);
+      border: 2px solid var(--color-primary);
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background: var(--color-accent);
+      border-color: var(--color-accent);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 2px solid var(--color-primary);
+      color: var(--color-primary);
+    }
+
+    .btn-outline:hover {
+      background: var(--color-primary);
+      color: var(--color-white);
+    }
+
+    .btn-secondary {
+      background: var(--color-secondary);
+      border-color: var(--color-secondary);
+    }
+
+    .btn-secondary:hover {
+      background: var(--color-primary);
+      border-color: var(--color-primary);
+    }
+
+    .cta-section {
+      text-align: center;
+      padding: 2.5rem 0;
+    }
+
+    /* Secciones */
+    section {
+      padding: 4rem 0;
+    }
+
+    section:nth-child(even) {
+      background: var(--color-bg-alt);
+    }
+
+    /* Tarjetas de reconocimiento */
+    .recognition-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .recognition-card {
+      background: var(--color-white);
+      padding: 1.8rem;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-soft);
+      border-left: 4px solid var(--color-secondary);
+      transition: var(--transition);
+    }
+
+    .recognition-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    /* Testimonios */
+    .testimonials {
+      background: var(--color-bg-main);
+    }
+
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .testimonial-card {
+      background: var(--color-white);
+      padding: 1.5rem;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-soft);
+      font-style: italic;
+      position: relative;
+    }
+
+    .testimonial-card::before {
+      content: "“";
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 4rem;
+      color: var(--color-secondary);
+      opacity: 0.3;
+      position: absolute;
+      top: -10px;
+      left: 15px;
+    }
+
+    .testimonial-author {
+      display: block;
+      margin-top: 1rem;
+      font-weight: 700;
+      color: var(--color-primary);
+      font-style: normal;
+      font-size: 0.95rem;
+    }
+
+    /* Guía */
+    .guide-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    @media (max-width: 768px) {
+      .guide-section { grid-template-columns: 1fr; }
+    }
+
+    .guide-avatar {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: var(--color-bg-alt);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      box-shadow: var(--shadow-hover);
+      border: 3px solid var(--color-secondary);
+    }
+
+    .guide-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
+    /* Módulos */
+    .modules-list {
+      counter-reset: module;
+      margin-top: 2rem;
+    }
+
+    .module-item {
+      background: var(--color-white);
+      padding: 1.8rem 2rem 1.8rem 5.5rem;
+      border-radius: var(--radius-md);
+      margin-bottom: 1.5rem;
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      transition: var(--transition);
+    }
+
+    .module-item:hover {
+      box-shadow: var(--shadow-hover);
+    }
+
+    .module-item::before {
+      counter-increment: module;
+      content: counter(module);
+      position: absolute;
+      left: 1.5rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 40px;
+      height: 40px;
+      background: var(--color-primary);
+      color: var(--color-white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+    }
+
+    .module-title {
+      font-weight: 700;
+      color: var(--color-primary);
+      margin-bottom: 0.5rem;
+      font-size: 1.15rem;
+    }
+
+    /* Incluye */
+    .includes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .include-item {
+      text-align: center;
+      padding: 1.5rem;
+      background: var(--color-white);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .include-icon {
+      font-size: 2rem;
+      color: var(--color-secondary);
+      margin-bottom: 1rem;
+    }
+
+    /* Pricing */
+    .pricing-section {
+      text-align: center;
+    }
+
+    .pricing-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2.5rem;
+    }
+
+    .pricing-card {
+      background: var(--color-white);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      box-shadow: var(--shadow-soft);
+      border: 3px solid transparent;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .pricing-card.featured {
+      border-color: var(--color-primary);
+      transform: scale(1.03);
+    }
+
+    .pricing-card.featured::after {
+      content: "Recomendado";
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--color-primary);
+      color: var(--color-white);
+      padding: 4px 20px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+
+    .price {
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--color-primary);
+      font-family: 'Cormorant Garamond', serif;
+      margin: 1rem 0;
+    }
+
+    .price span {
+      font-size: 1rem;
+      color: var(--color-text-muted);
+      font-weight: 400;
+    }
+
+    .pricing-features {
+      list-style: none;
+      margin: 2rem 0;
+      text-align: left;
+    }
+
+    .pricing-features li {
+      padding: 0.6rem 0;
+      border-bottom: 1px dashed rgba(139, 115, 85, 0.2);
+      display: flex;
+      align-items: flex-start;
+      gap: 0.8rem;
+    }
+
+    .pricing-features li::before {
+      content: "✓";
+      color: var(--color-secondary);
+      font-weight: 700;
+    }
+
+    /* Bloque Métodos de Pago Alternativos */
+    .alternative-payments-box {
+      margin-top: 2.5rem;
+      background: var(--color-white);
+      padding: 2rem;
+      border-radius: var(--radius-md);
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: var(--shadow-soft);
+      border-left: 4px solid var(--color-secondary);
+      text-align: left;
+      transition: var(--transition);
+    }
+
+    .alternative-payments-box:hover {
+      box-shadow: var(--shadow-hover);
+    }
+
+    /* FAQ Accordion */
+    .faq-accordion {
+      max-width: 800px;
+      margin: 2rem auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .faq-item {
+      background: var(--color-white);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-soft);
+      overflow: hidden;
+      transition: var(--transition);
+      border: 1px solid rgba(139, 115, 85, 0.1);
+    }
+
+    .faq-item[open] {
+      box-shadow: var(--shadow-hover);
+      border-color: rgba(212, 165, 154, 0.6);
+    }
+
+    .faq-question {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--color-primary);
+      padding: 1.3rem 1.5rem;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      user-select: none;
+    }
+
+    .faq-question::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-icon {
+      font-size: 1.4rem;
+      font-family: monospace;
+      color: var(--color-secondary);
+      transition: transform 0.3s ease;
+      line-height: 1;
+      font-weight: normal;
+    }
+
+    .faq-item[open] .faq-icon {
+      transform: rotate(45deg);
+      color: var(--color-primary);
+    }
+
+    .faq-answer {
+      padding: 0 1.5rem 1.4rem;
+      color: var(--color-text-main);
+      font-size: 1rem;
+      line-height: 1.7;
+      animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Footer */
+    footer {
+      background: var(--color-primary);
+      color: var(--color-white);
+      text-align: center;
+      padding: 3rem 0;
+      margin-top: 3rem;
+    }
+
+    footer a {
+      color: var(--color-secondary);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Botón Flotante de WhatsApp */
+    .floating-whatsapp {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      width: 58px;
+      height: 58px;
+      background: var(--color-whatsapp);
+      color: var(--color-white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 24px rgba(37, 211, 102, 0.4);
+      z-index: 999;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .floating-whatsapp:hover {
+      transform: scale(1.08) translateY(-2px);
+      box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6);
+    }
+
+    .floating-whatsapp svg {
+      width: 32px;
+      height: 32px;
+      fill: currentColor;
+    }
+
+    /* Barra Inferior Sticky para Móviles */
+    .mobile-sticky-bar {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(253, 249, 245, 0.96);
+      backdrop-filter: blur(8px);
+      border-top: 1px solid rgba(139, 115, 85, 0.15);
+      padding: 10px 16px;
+      box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.06);
+      z-index: 998;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .mobile-sticky-bar .info {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.2;
+    }
+
+    .mobile-sticky-bar .info .title {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 700;
+      color: var(--color-primary);
+      font-size: 1.05rem;
+    }
+
+    .mobile-sticky-bar .info .price {
+      font-size: 0.95rem;
+      margin: 0;
+      color: var(--color-text-muted);
+      font-family: 'Lato', sans-serif;
+      font-weight: 400;
+    }
+
+    .mobile-sticky-bar .btn {
+      padding: 10px 18px;
+      font-size: 0.9rem;
+      white-space: nowrap;
+    }
+
+    /* Utilidades */
+    .text-center { text-align: center; }
+    .mt-2 { margin-top: 2rem; }
+    .mb-2 { margin-bottom: 2rem; }
+    .highlight { background: linear-gradient(120deg, rgba(212,165,154,0.3), transparent); padding: 0 4px; }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      h1 { font-size: 2.2rem; }
+      h2 { font-size: 1.8rem; }
+      .pricing-card.featured { transform: scale(1); }
+      .event-details { flex-direction: column; gap: 0.8rem; }
+      .guide-avatar {
+        width: 140px;
+        height: 140px;
+      }
+      .module-item {
+        padding: 1.6rem 1.4rem 1.6rem 4.8rem;
+      }
+      .module-item::before {
+        left: 1.2rem;
+        width: 36px;
+        height: 36px;
+        font-size: 1.15rem;
+      }
+      .mobile-sticky-bar {
+        display: flex;
+      }
+      .floating-whatsapp {
+        bottom: 74px; /* Elevar sobre la barra sticky */
+        right: 16px;
+        width: 50px;
+        height: 50px;
+      }
+      .floating-whatsapp svg {
+        width: 28px;
+        height: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="container">
+      <span class="hero-badge">Workshop en vivo · Grupo cerrado</span>
+      <h1>De vuelta a ti</h1>
+      <p class="hero-subtitle">Para la mujer que tiene la vida "perfecta" por fuera y un vacío inexplicable por dentro. Que sigue dando aunque ya no tiene más que dar. Que siente culpa hasta por querer parar.</p>
+      
+      <div class="event-details">
+        <span>📅 Domingos · 5:30 pm</span>
+        <span>🗓️ Inicia 7 de junio de 2026</span>
+        <span>👥 5 semanas</span>
+      </div>
+
+      <div class="cta-section">
+        <a href="#precio" class="btn">Quiero mi lugar — $97 USD</a>
+        <p class="mt-2" style="color: var(--color-text-muted); font-size: 0.90rem;">
+          Cupos limitados · Inscripciones cierran el 5 de junio
+        </p>
+        <!-- Link directo a métodos de pago alternativos -->
+        <a href="#otras-opciones-pago" class="btn btn-outline" style="margin-top: 1rem; padding: 10px 28px; font-size: 0.90rem;">
+          Estoy interesada, quiero conocer otras opciones de pago
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Reconoce Section -->
+  <section>
+    <div class="container">
+      <h2 class="text-center">¿Te suena familiar alguno de estos?</h2>
+      <div class="recognition-grid">
+        <div class="recognition-card">
+          Tienes pareja, hijos, trabajo, familia — y aun así algo no encaja.
+        </div>
+        <div class="recognition-card">
+          Por fuera sigues adelante. Por dentro ya no das más.
+        </div>
+        <div class="recognition-card">
+          Quieres parar de dar y te sientes egoísta hasta por pensarlo.
+        </div>
+        <div class="recognition-card">
+          Llevas años cuidando a todos menos a ti.
+        </div>
+        <div class="recognition-card">
+          Has hecho cursos, terapias, leído libros. Y sigues en el mismo barco.
+        </div>
+        <div class="recognition-card">
+          En la cola de tus prioridades, tú apareces de última — si apareces.
+        </div>
+      </div>
+      <p class="text-center mt-2" style="font-size: 1.2rem; color: var(--color-primary);">
+        Eso no es un vacío. No es una falla. <span class="highlight">No estás echada a perder, mi amor.</span><br>
+        Es una señal. Y se puede trabajar — sin drama, sin culpa, con herramientas reales.
+      </p>
+    </div>
+  </section>
+
+  <!-- Testimonios -->
+  <section class="testimonials">
+    <div class="container">
+      <h2 class="text-center">Palabras reales · Ellas ya lo sienten</h2>
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          "Yo sé que le escribes a mujeres más jóvenes. Pero tengo 82 años y me sentí tan identificada con lo que describes. Tan identificada."
+          <span class="testimonial-author">— Mujer de 82 años</span>
+        </div>
+        <div class="testimonial-card">
+          "Cierto. Estoy agradecida. Pero algo no encaja en mi... quiero regresar a mi."
+          <span class="testimonial-author">— Carmen</span>
+        </div>
+        <div class="testimonial-card">
+          "Si me he sentido así muchas veces."
+          <span class="testimonial-author">— Nohra</span>
+        </div>
+        <div class="testimonial-card">
+          "WoW qué oportuno, ahorita en este preciso momento me siento así."
+          <span class="testimonial-author">— Marga</span>
+        </div>
+        <div class="testimonial-card">
+          "Ufff así me he sentido, gracias por compartir."
+          <span class="testimonial-author">— Silvia</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tu Guía -->
+  <section>
+    <div class="container">
+      <div class="guide-section">
+        <div>
+          <h2>Tu guía</h2>
+          <div class="guide-avatar">
+             <img 
+                src="https://chilapina.com/devueltati/chila-ig.png" 
+                alt="Chila Piña — Terapeuta y guía del workshop"
+                loading="lazy"
+                onerror="this.onerror=null; this.src='chila-ig.png';"
+              >
+          </div>
+        </div>
+        <div>
+          <h3>Hola, soy Chila</h3>
+          <p>Soy terapeuta con más de <strong>25 años</strong> acompañando mujeres en su proceso de autoconocimiento y transformación.</p>
+          <p>Creé <em>De vuelta a ti</em> porque vi cómo esa herida — ese vacío que no se puede nombrar — aparecía una y otra vez en mis consultas. No lo creé desde un libro. Lo creé desde lo que yo misma viví.</p>
+          <p>Y desde los mensajes de cientos de mujeres que me escribieron una sola palabra cuando pregunté cómo se sentían. Esa palabra lo dijo todo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Módulos -->
+  <section>
+    <div class="container">
+      <h2 class="text-center">El camino · 5 domingos. 5 módulos. Un solo camino.</h2>
+      <div class="modules-list">
+        <div class="module-item">
+          <div class="module-title">1. Identidad — ¿quién eres realmente?</div>
+          <p>¿Cuánto de lo que haces eres tú, y cuánto es lo que los demás esperan? Reconocemos el "yo sigo adelante, pase lo que pase" — y entendemos que reconocerlo no es rendirse. Es el primer paso para no colapsar.</p>
+        </div>
+        <div class="module-item">
+          <div class="module-title">2. Autocompasión — no estás fallando</div>
+          <p>Querer parar de dar cuando ya no tienes más no es egoísmo. Es una señal del alma. Aprenderás a observarte sin juzgarte y a detectar de dónde viene el agotamiento.</p>
+        </div>
+        <div class="module-item">
+          <div class="module-title">3. Creencias limitantes — transformar sin traicionar</div>
+          <p>Identificar las creencias que te hacen sentir culpable, vacía, atrapada — y empezar a trabajarlas sin sentir que le eres desleal a tu familia, tus ancestros, o lo que te enseñaron.</p>
+        </div>
+        <div class="module-item">
+          <div class="module-title">4. Tu cuerpo — reconexión sin guerras</div>
+          <p>Volver a tu cuerpo como aliado, no como enemigo. Sin aceptación no hay transformación. Tu cuerpo lleva tiempo hablándote — aquí aprendes a escucharlo de verdad.</p>
+        </div>
+        <div class="module-item">
+          <div class="module-title">5. Límites compasivos — desde la paz, no el drama</div>
+          <p>Solo cuando ya sabes quién eres y te tienes compasión, puedes poner límites reales. Límites que no hieren a quien amas. Límites que te liberan a ti.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Incluye -->
+  <section>
+    <div class="container">
+      <h2 class="text-center">Cada módulo incluye · Herramientas reales para cuerpo y mente</h2>
+      <div class="includes-grid">
+        <div class="include-item">
+          <div class="include-icon">🌿</div>
+          <strong>Fórmula Bach personalizada</strong>
+          <p style="margin-top: 0.5rem; font-size: 0.95rem;">Esencias florales seleccionadas para lo que surja en cada módulo.</p>
+        </div>
+        <div class="include-item">
+          <div class="include-icon">💬</div>
+          <strong>Material de afirmaciones</strong>
+          <p style="margin-top: 0.5rem; font-size: 0.95rem;">Afirmaciones diseñadas para trabajar creencias entre sesiones.</p>
+        </div>
+        <div class="include-item">
+          <div class="include-icon">🧘</div>
+          <strong>Prácticas de mindfulness</strong>
+          <p style="margin-top: 0.5rem; font-size: 0.95rem;">Herramientas activas para integrar cuerpo y mente en tu día a día.</p>
+        </div>
+        <div class="include-item">
+          <div class="include-icon">👥</div>
+          <strong>Grupo cerrado en vivo</strong>
+          <p style="margin-top: 0.5rem; font-size: 0.95rem;">Acompañamiento real semana a semana. No estás sola.</p>
+        </div>
+        <div class="include-item">
+          <div class="include-icon">✨</div>
+          <strong>Aromaterapia</strong>
+          <p style="margin-top: 0.5rem; font-size: 0.95rem;">Sugerencias personalizadas de aromas y aceites esenciales por módulo.</p>
+        </div>
+        <div class="include-item">
+          <div class="include-icon">🎬</div>
+          <strong>Grabación de sesiones</strong>
+          <p style="margin-top: 0.5rem; font-size: 0.95rem;">Acceso permanente a cada módulo grabado.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="precio" class="pricing-section">
+    <div class="container">
+      <h2>Tu inversión · Elige cómo quieres entrar</h2>
+      
+      <div class="pricing-cards">
+        <!-- Plan Completo -->
+        <div class="pricing-card featured">
+          <h3>Todo el workshop</h3>
+          <div class="price">$97 <span>USD · Pago único</span></div>
+          <p style="color: var(--color-secondary); font-weight: 600;">Ahorras $28 USD</p>
+          
+          <ul class="pricing-features">
+            <li>5 encuentros en vivo por Google Meet (domingos 5:30 pm)</li>
+            <li>Grabación de cada sesión disponible</li>
+            <li>Fórmula Bach personalizada por módulo</li>
+            <li>Material de afirmaciones para creencias</li>
+            <li>Prácticas de mindfulness cuerpo-mente</li>
+            <li>Sugerencias de aromaterapia por módulo</li>
+            <li>Grupo cerrado con acompañamiento real</li>
+          </ul>
+          
+          <a href="https://www.paypal.com/ncp/payment/Z5JA7YVBXJ8GS?return=https://chilapina.com/gracias/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Quiero mi lugar — $97 USD</a>
+          <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--color-text-muted);">
+            Inicia domingo 7 de junio a las 5:30 pm
+          </p>
+        </div>
+
+        <!-- Módulo a módulo -->
+        <div class="pricing-card">
+          <h3>Flexibilidad · Módulo a módulo</h3>
+          <div class="price">$25 <span>USD por módulo</span></div>
+          <p style="color: var(--color-text-muted);">Total $125 si completas los 5</p>
+          
+          <ul class="pricing-features">
+            <li>Acceso al módulo que elijas — pagas antes de cada domingo</li>
+            <li>Grabación de la sesión que pagues</li>
+            <li>Material de afirmaciones del módulo</li>
+            <li>Práctica de mindfulness del módulo</li>
+            <li>Puedes pasarte al plan completo en cualquier momento</li>
+          </ul>
+          
+          <a href="https://www.paypal.com/ncp/payment/7HLPTBWHZAJXW?return=https://chilapina.com/gracias/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Empezar con el módulo 1</a>
+          <p style="margin-top: 1rem; font-size: 0.85rem; color: var(--color-text-muted);">
+            Si decides el plan completo, se descuenta lo pagado
+          </p>
+        </div>
+      </div>
+
+      <!-- Explicación Módulo a Módulo -->
+      <div style="margin-top: 2.5rem; background: var(--color-white); padding: 1.5rem; border-radius: var(--radius-md); max-width: 800px; margin-left: auto; margin-right: auto;">
+        <strong style="color: var(--color-primary);">¿Cómo funciona módulo a módulo?</strong>
+        <p style="margin-top: 0.8rem;">
+          Pagas $25 antes de cada domingo. Si en algún punto antes del 4° módulo quieres el plan completo, solo pagas la diferencia hasta los $97.
+        </p>
+      </div>
+
+      <!-- Métodos Alternativos de Pago -->
+      <div id="otras-opciones-pago" class="alternative-payments-box">
+        <strong style="color: var(--color-primary); display: block; font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; margin-bottom: 0.4rem;">
+          ¿Prefieres pagar por otro medio distinto a PayPal?
+        </strong>
+        <p style="color: var(--color-text-muted); font-size: 0.98rem; margin-bottom: 1.2rem;">
+          Si deseas pagar mediante <strong>Zelle, transferencia bancaria nacional o internacional, o tarjeta</strong>, escríbeme directamente por WhatsApp. Te facilitamos los datos en minutos para confirmar tu cupo.
+        </p>
+        <a href="https://wa.link/40ec2c" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="padding: 10px 24px; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 0.6rem;">
+          <span>💬</span> Consultar otras opciones de pago por WhatsApp
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Terapia personalizada -->
+  <section>
+    <div class="container text-center">
+      <h2>¿Quieres ir más profundo?</h2>
+      <p style="max-width: 700px; margin: 0 auto 1.5rem;">
+        El workshop es el inicio. El camino puede continuar.
+      </p>
+      <p style="max-width: 700px; margin: 0 auto 2rem;">
+        Para quienes terminan el workshop: Acompañamiento terapéutico personalizado con Chila. Las alumnas del workshop tienen prioridad y condiciones especiales para acceder a sesiones individuales.
+      </p>
+      <a href="https://wa.link/40ec2c" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Quiero saber más sobre terapia personalizada</a>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion -->
+  <section id="faq">
+    <div class="container">
+      <h2 class="text-center">Preguntas · Lo que preguntan ellas</h2>
+      
+      <div class="faq-accordion">
+        <details class="faq-item" open>
+          <summary class="faq-question">
+            <span>¿Cuándo son las sesiones exactamente?</span>
+            <span class="faq-icon">+</span>
+          </summary>
+          <div class="faq-answer">
+            Los domingos a las 5:30 pm. Iniciamos el domingo 7 de junio de 2026. Son 5 domingos consecutivos, uno por módulo.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>¿Qué pasa si no puedo ir en vivo algún domingo?</span>
+            <span class="faq-icon">+</span>
+          </summary>
+          <div class="faq-answer">
+            Cada sesión queda grabada y disponible para ti. Igual recomiendo venir en vivo cuando puedas — la energía del grupo en tiempo real es parte del proceso.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>¿Es para mujeres de cualquier edad?</span>
+            <span class="faq-icon">+</span>
+          </summary>
+          <div class="faq-answer">
+            Sí, sin límite de edad. Una mujer de 82 años me escribió diciendo que se sintió completamente identificada. Esto no tiene límite de edad — tiene límite de disposición.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>¿Qué es la fórmula Bach personalizada?</span>
+            <span class="faq-icon">+</span>
+          </summary>
+          <div class="faq-answer">
+            Son esencias florales del Dr. Bach seleccionadas según lo que surja en cada módulo de tu proceso. Apoyo vibracional natural — parte de las herramientas comprobadas que usamos en cada semana.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>Si pago módulo a módulo, ¿puedo luego pagar el resto completo?</span>
+            <span class="faq-icon">+</span>
+          </summary>
+          <div class="faq-answer">
+            Sí. En cualquier momento puedes pasarte al plan completo. Lo que ya pagaste se descuenta — solo pagas la diferencia hasta los $97.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>¿Necesito experiencia previa en terapia?</span>
+            <span class="faq-icon">+</span>
+          </summary>
+          <div class="faq-answer">
+            No. Si has intentado mucho y nada ha funcionado del todo, este proceso es para ti. No es solo información — es vivirlo.
+          </div>
+        </details>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Cierre -->
+  <section style="background: linear-gradient(135deg, var(--color-primary), var(--color-accent)); color: var(--color-white); text-align: center;">
+    <div class="container">
+      <h2 style="color: var(--color-white);">Para cerrar</h2>
+      <p style="font-size: 1.3rem; max-width: 700px; margin: 0 auto 1.5rem; font-style: italic;">
+        "Lo que tú permites se convierte en ley. ¿Qué has permitido tú?"
+      </p>
+      <p style="max-width: 700px; margin: 0 auto 2rem; opacity: 0.95;">
+        Llevas años siendo la columna emocional de tu familia. La que sostiene, la que da, la que aguanta. Y todavía te preguntas si hay algo malo contigo por querer parar.<br><br>
+        <strong>No hay nada malo contigo.</strong><br>
+        Ya te toca ser feliz. Sin culpa. Sin drama. Con paz.
+      </p>
+      <a href="#precio" class="btn" style="background: var(--color-white); color: var(--color-primary); border-color: var(--color-white);">Te espero adentro</a>
+      <p style="margin-top: 2rem; font-size: 1.1rem;">— Chila Piña</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© 2026 Chila Piña · De vuelta a ti · Workshop online</p>
+      <p>Domingos 5:30 pm desde el 7 de junio</p>
+    </div>
+  </footer>
+
+  <!-- Botón Flotante de WhatsApp para dudas -->
+  <a href="https://wa.link/40ec2c" target="_blank" rel="noopener noreferrer" class="floating-whatsapp" aria-label="Contactar por WhatsApp">
+    <svg viewBox="0 0 32 32">
+      <path d="M16 2a13.9 13.9 0 0 0-12 21l-1.9 6.9 7.1-1.9A14 14 0 1 0 16 2zm0 25.5c-2.3 0-4.5-.6-6.4-1.8l-.5-.3-4.2 1.1 1.1-4.1-.3-.5A11.5 11.5 0 1 1 27.5 16 11.5 11.5 0 0 1 16 27.5zm6.3-8.6c-.3-.2-2-.9-2.3-1.1-.3-.1-.5-.2-.7.2-.2.3-.8 1.1-1 1.3-.2.2-.4.2-.7.1a9 9 0 0 1-2.6-1.6 9.8 9.8 0 0 1-1.8-2.2c-.2-.3 0-.5.1-.7.1-.1.3-.4.5-.6.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5s-.7-1.7-1-2.3c-.3-.6-.6-.5-.8-.5h-.7c-.2 0-.7.1-1.1.5-.4.4-1.4 1.4-1.4 3.4s1.5 3.9 1.7 4.1c.2.3 2.9 4.4 7 6.2 1 .4 1.7.7 2.3.9 1 .3 1.9.3 2.6.2.8-.1 2.3-.9 2.6-1.8.3-.9.3-1.7.2-1.9-.1-.1-.3-.2-.6-.4z"/>
+    </svg>
+  </a>
+
+  <!-- Barra Sticky Inferior Móvil -->
+  <div class="mobile-sticky-bar">
+    <div class="info">
+      <span class="title">De vuelta a ti</span>
+      <span class="price">$97 USD · 5 semanas</span>
+    </div>
+    <a href="#precio" class="btn btn-secondary">Inscribirme</a>
+  </div>
+
+  <!-- Script ligero para acordeón exclusivo (cierra otros al abrir uno) -->
+  <script>
+    document.querySelectorAll('.faq-item').forEach((detail) => {
+      detail.addEventListener('toggle', (e) => {
+        if (detail.open) {
+          document.querySelectorAll('.faq-item').forEach((otherDetail) => {
+            if (otherDetail !== detail && otherDetail.open) {
+              otherDetail.open = false;
+            }
+          });
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

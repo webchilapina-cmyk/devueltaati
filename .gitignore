@@ -1,0 +1,13 @@
+# Versiones anteriores de trabajo
+devueltaati_v2.html
+devueltaati_version_0105.html
+devueltaati_version_0105-2.html
+devueltaati_version_18052026.html
+devueltaati_version_2805.html
+
+# Archivos de notas y prompts
+*.md
+
+# Archivos de sistema y logs
+.DS_Store
+Thumbs.db
