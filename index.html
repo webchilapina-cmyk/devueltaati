@@ -59,7 +59,6 @@
       color: var(--color-text-main);
       line-height: 1.7;
       font-weight: 300;
-      padding-bottom: 70px; /* Espacio para barra móvil flotante */
     }
 
     h1, h2, h3, h4 {
@@ -514,8 +513,9 @@
       background: var(--color-primary);
       color: var(--color-white);
       text-align: center;
-      padding: 3rem 0;
-      margin-top: 3rem;
+      padding: 2.5rem 0;
+      margin-top: 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
     }
 
     footer a {
@@ -641,6 +641,9 @@
       .floating-whatsapp svg {
         width: 30px;
         height: 30px;
+      }
+      footer {
+        padding-bottom: 5.5rem; /* Margen interno para la barra fija móvil */
       }
     }
   </style>
