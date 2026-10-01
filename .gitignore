@@ -5,8 +5,13 @@ devueltaati_version_0105-2.html
 devueltaati_version_18052026.html
 devueltaati_version_2805.html
 
-# Archivos de notas y prompts
+# Archivos de notas, prompts y credenciales
 *.md
+*FTP*.txt
+*ftp*.txt
+*credenciales*
+*.key
+*.pem
 
 # Archivos de sistema y logs
 .DS_Store

@@ -1,0 +1,27 @@
+name: Despliegue automático a chilapina.com
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Desplegar Landing Page vía SFTP
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+
+      - name: Subir archivos al servidor
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+        with:
+          server: ${{ secrets.SFTP_HOST }}
+          username: ${{ secrets.SFTP_USER }}
+          password: ${{ secrets.SFTP_PASSWORD }}
+          sftp_private_key: ${{ secrets.SFTP_KEY }}
+          port: ${{ secrets.SFTP_PORT || '22' }}
+          local_path: './*'
+          remote_path: ${{ secrets.SFTP_REMOTE_DIR }}
+          sftpArgs: '-o ConnectTimeout=60'
