@@ -204,42 +204,304 @@
     /* Testimonios */
     .testimonials {
       background: var(--color-bg-main);
+      padding: 5rem 0;
+      position: relative;
+    }
+
+    .testimonials-header {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 3rem;
+    }
+
+    .testimonials-tag {
+      display: inline-block;
+      background: rgba(212, 165, 154, 0.2);
+      color: var(--color-primary);
+      padding: 6px 16px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    .testimonials-subtitle {
+      font-size: 1.15rem;
+      color: var(--color-text-muted);
+      line-height: 1.6;
+      margin-top: 0.5rem;
     }
 
     .testimonial-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      align-items: stretch;
     }
 
     .testimonial-card {
       background: var(--color-white);
-      padding: 1.5rem;
       border-radius: var(--radius-md);
       box-shadow: var(--shadow-soft);
-      font-style: italic;
+      border: 1px solid rgba(139, 115, 85, 0.12);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: var(--transition);
       position: relative;
     }
 
-    .testimonial-card::before {
-      content: "“";
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 4rem;
-      color: var(--color-secondary);
-      opacity: 0.3;
-      position: absolute;
-      top: -10px;
-      left: 15px;
+    .testimonial-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-hover);
+      border-color: rgba(212, 165, 154, 0.5);
     }
 
-    .testimonial-author {
-      display: block;
-      margin-top: 1rem;
+    .testimonial-card-featured {
+      border: 1.5px solid var(--color-secondary);
+      background: linear-gradient(180deg, #FFFFFF 0%, #FCF8F5 100%);
+    }
+
+    .testimonial-badge-featured {
+      background: var(--color-secondary);
+      color: var(--color-white);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      text-align: center;
+    }
+
+    .testimonial-content {
+      padding: 1.75rem 1.75rem 1.25rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .testimonial-author-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .testimonial-author-info {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+
+    .testimonial-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--color-secondary), var(--color-primary));
+      color: var(--color-white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.95rem;
+      flex-shrink: 0;
+      letter-spacing: 0.5px;
+    }
+
+    .testimonial-name {
+      font-family: 'Lato', sans-serif;
       font-weight: 700;
       color: var(--color-primary);
-      font-style: normal;
+      font-size: 1.05rem;
+      line-height: 1.2;
+      margin: 0;
+    }
+
+    .testimonial-role {
+      display: block;
+      font-size: 0.82rem;
+      color: var(--color-text-muted);
+      margin-top: 2px;
+    }
+
+    .testimonial-source-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 50px;
+      background: rgba(37, 211, 102, 0.12);
+      color: #1b8a43;
+      flex-shrink: 0;
+    }
+
+    .testimonial-source-badge.live {
+      background: rgba(139, 115, 85, 0.12);
+      color: var(--color-primary);
+    }
+
+    .testimonial-quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      line-height: 1.4;
+      font-weight: 600;
+      color: var(--color-primary);
+      margin-bottom: 0.85rem;
+      position: relative;
+    }
+
+    .testimonial-text {
+      color: var(--color-text-main);
       font-size: 0.95rem;
+      line-height: 1.65;
+      font-weight: 300;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Thumbnail de captura */
+    .testimonial-img-box {
+      margin: 0 1.5rem 1.5rem;
+      background: #F0EAE1;
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(139, 115, 85, 0.15);
+      overflow: hidden;
+      cursor: pointer;
+      position: relative;
+      transition: var(--transition);
+      box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.03);
+    }
+
+    .testimonial-img-box:hover {
+      border-color: var(--color-secondary);
+      box-shadow: 0 6px 20px rgba(139, 115, 85, 0.15);
+    }
+
+    .testimonial-thumb {
+      width: 100%;
+      height: 175px;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .testimonial-img-box:hover .testimonial-thumb {
+      transform: scale(1.03);
+    }
+
+    .testimonial-zoom-hint {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 9px 12px;
+      background: rgba(253, 249, 245, 0.96);
+      border-top: 1px solid rgba(139, 115, 85, 0.12);
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--color-primary);
+      transition: var(--transition);
+    }
+
+    .testimonial-img-box:hover .testimonial-zoom-hint {
+      background: var(--color-secondary);
+      color: var(--color-white);
+    }
+
+    /* Modal / Lightbox */
+    .testimonial-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(30, 26, 22, 0.82);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      z-index: 9999;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
+
+    .testimonial-modal.active {
+      display: flex;
+      opacity: 1;
+    }
+
+    .testimonial-modal-box {
+      max-width: 580px;
+      width: 100%;
+      max-height: 92vh;
+      background: var(--color-white);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+      display: flex;
+      flex-direction: column;
+      animation: modalFadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    @keyframes modalFadeIn {
+      from { transform: translateY(15px) scale(0.97); opacity: 0; }
+      to { transform: translateY(0) scale(1); opacity: 1; }
+    }
+
+    .testimonial-modal-header {
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(139, 115, 85, 0.12);
+      background: var(--color-bg-main);
+    }
+
+    .testimonial-modal-title {
+      font-weight: 700;
+      color: var(--color-primary);
+      font-size: 0.95rem;
+    }
+
+    .testimonial-modal-close {
+      background: transparent;
+      border: none;
+      font-size: 1.6rem;
+      line-height: 1;
+      cursor: pointer;
+      color: var(--color-text-muted);
+      padding: 2px 8px;
+      border-radius: 6px;
+      transition: var(--transition);
+    }
+
+    .testimonial-modal-close:hover {
+      background: rgba(139, 115, 85, 0.12);
+      color: var(--color-primary);
+    }
+
+    .testimonial-modal-body {
+      overflow-y: auto;
+      padding: 1.2rem;
+      background: #1e1e1e;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 200px;
+    }
+
+    .testimonial-modal-img {
+      max-width: 100%;
+      max-height: calc(88vh - 80px);
+      object-fit: contain;
+      border-radius: 6px;
+      display: block;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     }
 
     /* Guía */
@@ -708,30 +970,242 @@
   </section>
 
   <!-- Testimonios -->
-  <section class="testimonials">
+  <section class="testimonials" id="testimonios">
     <div class="container">
-      <h2 class="text-center">Palabras reales · Ellas ya lo sienten</h2>
+      <div class="testimonials-header">
+        <span class="testimonials-tag">Testimonios reales</span>
+        <h2 class="text-center" style="margin-top: 0.5rem; margin-bottom: 0.5rem;">Palabras de quienes ya lo vivieron</h2>
+        <p class="testimonials-subtitle">
+          Mensajes espontáneos y sin filtros de mujeres que se dieron el permiso de volver a sí mismas en nuestros módulos y encuentros en vivo.
+        </p>
+      </div>
+
       <div class="testimonial-grid">
-        <div class="testimonial-card">
-          "Yo sé que le escribes a mujeres más jóvenes. Pero tengo 82 años y me sentí tan identificada con lo que describes. Tan identificada."
-          <span class="testimonial-author">— Mujer de 82 años</span>
-        </div>
-        <div class="testimonial-card">
-          "Cierto. Estoy agradecida. Pero algo no encaja en mi... quiero regresar a mi."
-          <span class="testimonial-author">— Carmen</span>
-        </div>
-        <div class="testimonial-card">
-          "Si me he sentido así muchas veces."
-          <span class="testimonial-author">— Nohra</span>
-        </div>
-        <div class="testimonial-card">
-          "WoW qué oportuno, ahorita en este preciso momento me siento así."
-          <span class="testimonial-author">— Marga</span>
-        </div>
-        <div class="testimonial-card">
-          "Ufff así me he sentido, gracias por compartir."
-          <span class="testimonial-author">— Silvia</span>
-        </div>
+        <!-- 1. Shanon Piñate (Featured) -->
+        <article class="testimonial-card testimonial-card-featured">
+          <div class="testimonial-badge-featured">⭐ Transformación de alma</div>
+          <div class="testimonial-content">
+            <div class="testimonial-author-bar">
+              <div class="testimonial-author-info">
+                <div class="testimonial-avatar">SP</div>
+                <div>
+                  <h3 class="testimonial-name">Shanon Piñate</h3>
+                  <span class="testimonial-role">Alumna de "De vuelta a ti"</span>
+                </div>
+              </div>
+              <span class="testimonial-source-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+                WhatsApp
+              </span>
+            </div>
+            <blockquote class="testimonial-quote">
+              "Sentirte en rumbo, sentirte plena es la mayor recompensa."
+            </blockquote>
+            <p class="testimonial-text">
+              "Llegué al workshop con mi alma pidiendo renovación de energía. Todos los módulos fueron especiales, llegaban justo en días en que vivía lo que trataríamos; fue alineación de alma. De mujer a mujer te digo: no dejes pasar ninguna oportunidad para reencontrarte... el esfuerzo vale la pena."
+            </p>
+          </div>
+          <div class="testimonial-img-box" onclick="openTestimonialModal('Testimonios/testimonio-shanon-pinate.png', 'Testimonio de Shanon Piñate — WhatsApp')" onkeydown="if(event.key==='Enter'||event.key===' ') openTestimonialModal('Testimonios/testimonio-shanon-pinate.png', 'Testimonio de Shanon Piñate — WhatsApp')" role="button" tabindex="0" aria-label="Ver captura original de Shanon Piñate">
+            <img src="Testimonios/testimonio-shanon-pinate.png" alt="Mensaje de WhatsApp de Shanon Piñate" class="testimonial-thumb" loading="lazy" />
+            <div class="testimonial-zoom-hint">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+              <span>Ver captura original completa</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2. Yarisel (Featured) -->
+        <article class="testimonial-card testimonial-card-featured">
+          <div class="testimonial-badge-featured">🌿 Prioridad y despertar</div>
+          <div class="testimonial-content">
+            <div class="testimonial-author-bar">
+              <div class="testimonial-author-info">
+                <div class="testimonial-avatar">YG</div>
+                <div>
+                  <h3 class="testimonial-name">Yarisel</h3>
+                  <span class="testimonial-role">Alumna de "De vuelta a ti"</span>
+                </div>
+              </div>
+              <span class="testimonial-source-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+                WhatsApp
+              </span>
+            </div>
+            <blockquote class="testimonial-quote">
+              "Es una oportunidad de ponerte por encima de todo y darte prioridad."
+            </blockquote>
+            <p class="testimonial-text">
+              "En el Módulo 1 tenía mucha tristeza guardada, pero cuando terminamos sentí mucha paz; fue como un despertar para continuar... Yo le diría a quien dude que se dé ese regalo. Aunque se te presenten miles de obstáculos, es maravilloso y reconfortante avanzar cada módulo."
+            </p>
+          </div>
+          <div class="testimonial-img-box" onclick="openTestimonialModal('Testimonios/testimonio-yarisel.png', 'Testimonio de Yarisel — Proceso y Reflexión')" onkeydown="if(event.key==='Enter'||event.key===' ') openTestimonialModal('Testimonios/testimonio-yarisel.png', 'Testimonio de Yarisel — Proceso y Reflexión')" role="button" tabindex="0" aria-label="Ver captura original de Yarisel">
+            <img src="Testimonios/testimonio-yarisel.png" alt="Mensaje de WhatsApp de Yarisel" class="testimonial-thumb" loading="lazy" />
+            <div class="testimonial-zoom-hint">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+              <span>Ver captura original completa</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 3. María Gabriela Salas Cisneros -->
+        <article class="testimonial-card">
+          <div class="testimonial-content">
+            <div class="testimonial-author-bar">
+              <div class="testimonial-author-info">
+                <div class="testimonial-avatar">MG</div>
+                <div>
+                  <h3 class="testimonial-name">María Gabriela Salas</h3>
+                  <span class="testimonial-role">Encuentro en vivo · Módulo 1</span>
+                </div>
+              </div>
+              <span class="testimonial-source-badge live">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="6"/></svg>
+                En vivo
+              </span>
+            </div>
+            <blockquote class="testimonial-quote">
+              "Hoy me siento recuperada, recargada de mi esencia y creyendo que 'Sí puedo'."
+            </blockquote>
+            <p class="testimonial-text">
+              "Yo llegué al Módulo 1 sintiendo que 'no me quedaba tiempo'. La reconexión con la propia fuerza interior comenzó desde el primer encuentro."
+            </p>
+          </div>
+          <div class="testimonial-img-box" onclick="openTestimonialModal('Testimonios/testimonio-de-vuelta-a-ti.png', 'María Gabriela Salas — Chat en vivo Módulo 1')" onkeydown="if(event.key==='Enter'||event.key===' ') openTestimonialModal('Testimonios/testimonio-de-vuelta-a-ti.png', 'María Gabriela Salas — Chat en vivo Módulo 1')" role="button" tabindex="0" aria-label="Ver captura original de María Gabriela Salas">
+            <img src="Testimonios/testimonio-de-vuelta-a-ti.png" alt="Comentario en vivo en la sala del Módulo 1" class="testimonial-thumb" loading="lazy" />
+            <div class="testimonial-zoom-hint">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+              <span>Ver captura original completa</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 4. Yarisel (Logro laboral / límites) -->
+        <article class="testimonial-card">
+          <div class="testimonial-content">
+            <div class="testimonial-author-bar">
+              <div class="testimonial-author-info">
+                <div class="testimonial-avatar">YG</div>
+                <div>
+                  <h3 class="testimonial-name">Yarisel</h3>
+                  <span class="testimonial-role">Círculo de Mujeres</span>
+                </div>
+              </div>
+              <span class="testimonial-source-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+                WhatsApp
+              </span>
+            </div>
+            <blockquote class="testimonial-quote">
+              "Hoy me atreví a pedir algo en mi empleo... ¡y me fue aprobado!"
+            </blockquote>
+            <p class="testimonial-text">
+              "Iba con temor porque es algo fuera de la regla y me daba pena... pero me dije: 'lo peor que puede pasar es que te digan que no, inténtalo'. A la de antes le costaba pedir esos pequeños favores."
+            </p>
+          </div>
+          <div class="testimonial-img-box" onclick="openTestimonialModal('Testimonios/testimonio-logro-laboral.png', 'Yarisel — Victoria laboral aplicando límites')" onkeydown="if(event.key==='Enter'||event.key===' ') openTestimonialModal('Testimonios/testimonio-logro-laboral.png', 'Yarisel — Victoria laboral aplicando límites')" role="button" tabindex="0" aria-label="Ver captura original de avance laboral">
+            <img src="Testimonios/testimonio-logro-laboral.png" alt="Mensaje de Yarisel sobre límites laborales en WhatsApp" class="testimonial-thumb" loading="lazy" />
+            <div class="testimonial-zoom-hint">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+              <span>Ver captura original completa</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 5. Participante Círculo (Límites cotidianos) -->
+        <article class="testimonial-card">
+          <div class="testimonial-content">
+            <div class="testimonial-author-bar">
+              <div class="testimonial-author-info">
+                <div class="testimonial-avatar">CM</div>
+                <div>
+                  <h3 class="testimonial-name">Participante del Círculo</h3>
+                  <span class="testimonial-role">Círculo de Mujeres</span>
+                </div>
+              </div>
+              <span class="testimonial-source-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+                WhatsApp
+              </span>
+            </div>
+            <blockquote class="testimonial-quote">
+              "Aquí ando poniendo límites a todo 🤣🤣🤣 Cuesta mucho pero aquí vamos."
+            </blockquote>
+            <p class="testimonial-text">
+              "Hoy me pasaron varias situaciones y respiré y me lancé. Cuesta mucho pero aquí vamos 🙏🏼"
+            </p>
+          </div>
+          <div class="testimonial-img-box" onclick="openTestimonialModal('Testimonios/testimonio-limites-whatsapp.png', 'Participante del Círculo — Poniendo límites')" onkeydown="if(event.key==='Enter'||event.key===' ') openTestimonialModal('Testimonios/testimonio-limites-whatsapp.png', 'Participante del Círculo — Poniendo límites')" role="button" tabindex="0" aria-label="Ver captura original de límites cotidianos">
+            <img src="Testimonios/testimonio-limites-whatsapp.png" alt="Mensaje de WhatsApp sobre límites en el día a día" class="testimonial-thumb" loading="lazy" />
+            <div class="testimonial-zoom-hint">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+              <span>Ver captura original completa</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 6. Marisol Durán Bergés -->
+        <article class="testimonial-card">
+          <div class="testimonial-content">
+            <div class="testimonial-author-bar">
+              <div class="testimonial-author-info">
+                <div class="testimonial-avatar">MD</div>
+                <div>
+                  <h3 class="testimonial-name">Marisol Durán Bergés</h3>
+                  <span class="testimonial-role">Alumna de los módulos</span>
+                </div>
+              </div>
+              <span class="testimonial-source-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+                WhatsApp
+              </span>
+            </div>
+            <blockquote class="testimonial-quote">
+              "Gracias por la dedicación y entrega en cada módulo... es un aporte a nuestro crecimiento."
+            </blockquote>
+            <p class="testimonial-text">
+              "@Chila Pina gracias a ti por la dedicación y a todas porque con la participación es un aporte directo al crecimiento de todas 🥰"
+            </p>
+          </div>
+          <div class="testimonial-img-box" onclick="openTestimonialModal('Testimonios/testimonio-marisol-duran.png', 'Marisol Durán Bergés — WhatsApp')" onkeydown="if(event.key==='Enter'||event.key===' ') openTestimonialModal('Testimonios/testimonio-marisol-duran.png', 'Marisol Durán Bergés — WhatsApp')" role="button" tabindex="0" aria-label="Ver captura original de Marisol Durán">
+            <img src="Testimonios/testimonio-marisol-duran.png" alt="Mensaje de WhatsApp de Marisol Durán Bergés" class="testimonial-thumb" loading="lazy" />
+            <div class="testimonial-zoom-hint">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+              <span>Ver captura original completa</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 7. Participante Círculo (Paz tras el encuentro) -->
+        <article class="testimonial-card">
+          <div class="testimonial-content">
+            <div class="testimonial-author-bar">
+              <div class="testimonial-author-info">
+                <div class="testimonial-avatar">PC</div>
+                <div>
+                  <h3 class="testimonial-name">Participante del Círculo</h3>
+                  <span class="testimonial-role">Círculo de Mujeres</span>
+                </div>
+              </div>
+              <span class="testimonial-source-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+                WhatsApp
+              </span>
+            </div>
+            <blockquote class="testimonial-quote">
+              "Salí con mucha paz dentro de todo este momento 🙏🏼❤️"
+            </blockquote>
+            <p class="testimonial-text">
+              "Gracias por este encuentro de verdad que salí con mucha paz dentro de todo este momento. Dios las bendiga a todas."
+            </p>
+          </div>
+          <div class="testimonial-img-box" onclick="openTestimonialModal('Testimonios/testimonio-paz-whatsapp.png', 'Participante del Círculo — Salí con mucha paz')" onkeydown="if(event.key==='Enter'||event.key===' ') openTestimonialModal('Testimonios/testimonio-paz-whatsapp.png', 'Participante del Círculo — Salí con mucha paz')" role="button" tabindex="0" aria-label="Ver captura original de testimonio de paz">
+            <img src="Testimonios/testimonio-paz-whatsapp.png" alt="Mensaje de WhatsApp sobre salir con paz del encuentro" class="testimonial-thumb" loading="lazy" />
+            <div class="testimonial-zoom-hint">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+              <span>Ver captura original completa</span>
+            </div>
+          </div>
+        </article>
       </div>
     </div>
   </section>
@@ -1011,6 +1485,19 @@
     </div>
   </footer>
 
+  <!-- Modal / Lightbox para ver capturas de testimonios -->
+  <div id="testimonialModal" class="testimonial-modal" onclick="if(event.target === this) closeTestimonialModal();" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="testimonial-modal-box">
+      <div class="testimonial-modal-header">
+        <span id="modalTitle" class="testimonial-modal-title">Captura original de testimonio</span>
+        <button class="testimonial-modal-close" onclick="closeTestimonialModal()" aria-label="Cerrar ventana">&times;</button>
+      </div>
+      <div class="testimonial-modal-body">
+        <img id="modalImg" class="testimonial-modal-img" src="" alt="Captura ampliada de testimonio" />
+      </div>
+    </div>
+  </div>
+
   <!-- Botón Flotante de WhatsApp para dudas -->
   <a href="https://wa.link/40ec2c" target="_blank" rel="noopener noreferrer" class="floating-whatsapp" aria-label="Contactar por WhatsApp">
     <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -1027,7 +1514,7 @@
     <a href="#precio" class="btn btn-secondary">Inscribirme</a>
   </div>
 
-  <!-- Script ligero para acordeón exclusivo (cierra otros al abrir uno) -->
+  <!-- Script ligero para acordeón y modal de testimonios -->
   <script>
     document.querySelectorAll('.faq-item').forEach((detail) => {
       detail.addEventListener('toggle', (e) => {
@@ -1039,6 +1526,34 @@
           });
         }
       });
+    });
+
+    // Modal para capturas de testimonios
+    function openTestimonialModal(src, title) {
+      const modal = document.getElementById('testimonialModal');
+      const img = document.getElementById('modalImg');
+      const titleEl = document.getElementById('modalTitle');
+      if (modal && img && titleEl) {
+        img.src = src;
+        img.alt = title;
+        titleEl.textContent = title;
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeTestimonialModal() {
+      const modal = document.getElementById('testimonialModal');
+      if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeTestimonialModal();
+      }
     });
   </script>
 
