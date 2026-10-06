@@ -13,6 +13,12 @@ devueltaati_version_2805.html
 *.key
 *.pem
 
+# Archivos temporales, zips y proyectos de edición
+*.zip
+*.prproj
+Testimonios/Videos/
+
 # Archivos de sistema y logs
 .DS_Store
 Thumbs.db
+
