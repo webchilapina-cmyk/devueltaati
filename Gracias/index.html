@@ -276,11 +276,24 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', '1659416128728461');
 fbq('track', 'PageView');
-fbq('track', 'Purchase', {value: 97.00, currency: 'USD'});
+// Compra: solo se registra si la alumna llega desde PayPal con ?plan=completo o ?plan=modulo,
+// con el monto de ese plan. Si recarga o vuelve a abrir la página en las 6 horas siguientes, no se repite
+// (así el pago de cada módulo, en domingos distintos, sí se registra cada vez).
+(function () {
+  var PLANES = { completo: 111.00, modulo: 25.00 };
+  var plan = new URLSearchParams(window.location.search).get('plan');
+  if (!plan || !PLANES.hasOwnProperty(plan)) return;
+  var clave = 'dvat_compra_' + plan;
+  try { var ultima = Number(localStorage.getItem(clave) || 0); if (Date.now() - ultima < 6 * 60 * 60 * 1000) return; } catch (e) {}
+  fbq('track', 'Purchase',
+      { value: PLANES[plan], currency: 'USD', content_name: 'De vuelta a ti - ' + plan },
+      { eventID: clave + '_' + Date.now() });
+  try { localStorage.setItem(clave, String(Date.now())); } catch (e) {}
+})();
 </script>
 <noscript>
 <img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1659416128728461&ev=Purchase&noscript=1"/>
+src="https://www.facebook.com/tr?id=1659416128728461&ev=PageView&noscript=1"/>
 </noscript>
 <!-- End Meta Pixel Code -->  
   
