@@ -170,6 +170,34 @@
       padding: 2.5rem 0;
     }
 
+    /* Badge descargable del hero */
+    .share-badge {
+      text-align: center;
+      padding: 2rem 0 0.5rem;
+    }
+    .share-badge-img {
+      display: block;
+      width: 100%;
+      max-width: 340px;
+      height: auto;
+      margin: 0 auto;
+      filter: drop-shadow(0 10px 22px rgba(62, 58, 51, 0.18));
+    }
+    .share-badge-text {
+      max-width: 460px;
+      margin: 1.4rem auto 1.1rem;
+      font-size: 1.05rem;
+      color: var(--color-text-muted);
+      font-style: italic;
+    }
+    .share-badge-btn {
+      padding: 11px 28px;
+      font-size: 0.95rem;
+    }
+    @media (max-width: 768px) {
+      .share-badge-img { max-width: 260px; }
+    }
+
     /* Secciones */
     section {
       padding: 4rem 0;
@@ -1066,15 +1094,11 @@
         <span>👥 5 semanas</span>
       </div>
 
-      <div class="cta-section">
-        <a href="#precio" class="btn">Quiero mi lugar — $97 USD</a>
-        <p class="mt-2" style="color: var(--color-text-muted); font-size: 0.90rem;">
-          Cupos limitados · Precio de $97 USD hasta el 26 de octubre (luego $110 USD)
-        </p>
-        <!-- Link directo a métodos de pago alternativos -->
-        <a href="#otras-opciones-pago" class="btn btn-outline" style="margin-top: 1rem; padding: 10px 28px; font-size: 0.90rem;">
-          Estoy interesada, quiero conocer otras opciones de pago
-        </a>
+      <!-- Badge descargable para compartir -->
+      <div class="share-badge">
+        <img src="Badge/badge-de-vuelta-a-ti-web.webp" alt="Badge De vuelta a ti, Edición 2 — Yo lo viviré" class="share-badge-img" width="900" height="900" />
+        <p class="share-badge-text">Descárgalo y compártelo con tu <em>bestie</em> (tu mejor amiga). No hay nada mejor que crecer juntas 💛</p>
+        <a href="Badge/badge-de-vuelta-a-ti-edicion-2.jpg" download="De-vuelta-a-ti-Edicion-2.jpg" class="btn btn-outline share-badge-btn">⬇ Descargar mi badge</a>
       </div>
     </div>
   </header>
@@ -1501,8 +1525,8 @@
         <!-- Plan Completo -->
         <div class="pricing-card featured">
           <h3>Todo el workshop</h3>
-          <div class="price">$97 <span>USD · Pago único</span></div>
-          <p style="color: var(--color-secondary); font-weight: 600;">Precio especial de $97 USD hasta el 26 de octubre · Luego $110 USD</p>
+          <div class="price">$111 <span>USD · Pago único</span></div>
+          <p style="color: var(--color-secondary); font-weight: 600;">Cupos limitados</p>
           
           <ul class="pricing-features">
             <li>5 encuentros en vivo por Google Meet (domingos 5:00 pm, hora Miami)</li>
@@ -1514,7 +1538,7 @@
             <li>Grupo cerrado con acompañamiento real</li>
           </ul>
           
-          <a href="https://www.paypal.com/ncp/payment/Z5JA7YVBXJ8GS?return=https://chilapina.com/gracias/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Quiero mi lugar — $97 USD</a>
+          <a href="https://www.paypal.com/ncp/payment/Z5JA7YVBXJ8GS?return=https://chilapina.com/gracias/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Quiero mi lugar — $111 USD</a>
           <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--color-text-muted);">
             Inicia domingo 1 de noviembre a las 5:00 pm (hora Miami)
           </p>
@@ -1545,7 +1569,7 @@
       <div style="margin-top: 2.5rem; background: var(--color-white); padding: 1.5rem; border-radius: var(--radius-md); max-width: 800px; margin-left: auto; margin-right: auto;">
         <strong style="color: var(--color-primary);">¿Cómo funciona módulo a módulo?</strong>
         <p style="margin-top: 0.8rem;">
-          Pagas $25 antes de cada domingo. Si en algún punto antes del 4° módulo quieres el plan completo, solo pagas la diferencia hasta los $110.
+          Pagas $25 antes de cada domingo. Si en algún punto antes del 4° módulo quieres el plan completo, solo pagas la diferencia hasta los $111.
         </p>
       </div>
 
@@ -1631,7 +1655,7 @@
             <span class="faq-icon">+</span>
           </summary>
           <div class="faq-answer">
-            Sí. En cualquier momento puedes pasarte al plan completo. Lo que ya pagaste se descuenta — solo pagas la diferencia hasta los $110.
+            Sí. En cualquier momento puedes pasarte al plan completo. Lo que ya pagaste se descuenta — solo pagas la diferencia hasta los $111.
           </div>
         </details>
 
@@ -1698,7 +1722,7 @@
   <div class="mobile-sticky-bar">
     <div class="info">
       <span class="title">De vuelta a ti</span>
-      <span class="price">$97 USD · 5 semanas</span>
+      <span class="price">$111 USD · 5 semanas</span>
     </div>
     <a href="#precio" class="btn btn-secondary">Inscribirme</a>
   </div>
